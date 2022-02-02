@@ -10,6 +10,7 @@ app.use(bodyParser.json()) // support json encoded bodies
 app.use(bodyParser.urlencoded({extended: true})) // support encoded bodies
 
 require('./routes/sendsms')(express, app)
+require('./routes/sendjson')(express, app)
 
 app.listen(appPort, appIP, () => {
     console.log('Server Connected to http://0.0.0.0:' + appPort)
